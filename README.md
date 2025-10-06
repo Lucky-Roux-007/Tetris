@@ -28,7 +28,7 @@ To run this game on your local machine, follow these steps.
 1.  **Clone the repository:**
     ```sh
     git clone https://github.com/Lucky-Roux-007/Tetris.git
-    cd pygame-tetris
+    cd Tetris
     ```
 
 2.  **Install the necessary dependencies:**
@@ -51,3 +51,4 @@ To run this game on your local machine, follow these steps.
 - **Spacebar:** Hard drop (sonic drop)
 
 - **P:** Pause / Resume the game
+
