@@ -1,54 +1,107 @@
-﻿# Pygame Tetris
+﻿# 🧱 Neon Stack: Tetris in Pygame 🎮
 
-A classic implementation of the Tetris game built with Python and the Pygame library. This project features smooth block animations, particle effects, and classic Tetris mechanics like scoring, a 'next piece' preview, and increasing difficulty.
+Fast, colorful, and satisfyingly crunchy. This is a modern-feel Tetris build in Python with smooth falling interpolation, ghost projection, particle effects, and a clean side panel for score + next piece planning.
 
+If you like classic mechanics with a little arcade polish, this one is for you.
 
-## Features
+<table>
+	<tr>
+		<td><img src="assets/Screenshot_1.png" alt="Gameplay Screenshot 1" /></td>
+		<td><img src="assets/Screenshot_2.png" alt="Gameplay Screenshot 2" /></td>
+	</tr>
+</table>
 
-- **Classic Tetris Gameplay:** Move, rotate, and drop tetriminos to clear lines.
-- **Smooth Animations:** Interpolated block movements for a polished visual feel.
-- **Ghost Piece:** See where your piece will land before you drop it.
-- **Particle Effects:** Satisfying particle bursts for line clears and hard drops.
-- **Scoring System:** Score points for single, double, triple, and "Tetris" line clears.
-- **Next Piece Preview:** Plan your moves by seeing the upcoming piece.
-- **Sound and Music:** Immersive background music and sound effects for game actions.
-- **Pause/Resume Functionality:** Take a break whenever you need.
+## ✨ What Makes It Fun
 
-## How to Run
+- 🎯 Classic 10x20 Tetris ruleset with responsive movement.
+- 🎲 7-bag randomizer for fair piece distribution.
+- 👻 Ghost piece preview so you can read drops instantly.
+- ⚡ Soft drop and sonic hard drop with score bonus.
+- 💥 Line clear flash + shatter particles for feedback.
+- 🔮 Next piece preview panel.
+- ⏸️ Pause menu and game over menu with mouse-click buttons.
+- 🔊 Background music + SFX with graceful fallback if a file is missing.
 
-To run this game on your local machine, follow these steps.
+## 🧠 Gameplay Notes
 
-### Prerequisites
+- Board size: `10 x 20`
+- Default fall speed: `500 ms / row`
+- Soft drop speed: `50 ms / row`
+- Sonic drop speed: `10 ms / row`
 
-- Python 3.x
-- Git
+### 🏆 Scoring
 
-### Installation & Execution
+| Action | Points |
+|---|---:|
+| Single line clear | 100 |
+| Double line clear | 300 |
+| Triple line clear | 500 |
+| Tetris (4 lines) | 800 |
+| Sonic drop bonus | `2 x cells dropped` |
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/Lucky-Roux-007/Tetris.git
-    cd Tetris
-    ```
+## 🎮 Controls
 
-2.  **Install the necessary dependencies:**
-    The only dependency is Pygame. You can install it using pip.
-    ```sh
-    pip install pygame
-    ```
+- Left Arrow: Move left
+- Right Arrow: Move right
+- Up Arrow: Rotate clockwise
+- Down Arrow (hold): Soft drop
+- Space: Sonic hard drop
+- P: Pause / resume
+- Mouse: Click buttons in pause/game-over overlays
 
-3.  **Run the game:**
-    ```sh
-    python tetris.py
-    ```
+## 🚀 Quick Start
 
-## Controls
+### 1) Clone
 
-- **Left Arrow:** Move piece left
-- **Right Arrow:** Move piece right
-- **Down Arrow:** Soft drop
-- **Up Arrow:** Rotate piece
-- **Spacebar:** Hard drop (sonic drop)
+```bash
+git clone https://github.com/Lucky-Roux-007/Tetris.git
+cd Tetris
+```
 
-- **P:** Pause / Resume the game
+### 2) Install dependency
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3) Run
+
+```bash
+python tetris.py
+```
+
+## 📦 Requirements
+
+- Python 3.9+
+- `pygame-ce==2.5.7`
+
+## 🗂️ Project Layout
+
+```text
+.
+├── README.md
+├── requirements.txt
+├── src
+│   ├── background.mp3
+│   ├── drop.wav
+│   ├── line_clear.wav
+│   ├── PressStart2P-Regular.ttf
+│   └── rotate.wav
+└── tetris.py
+```
+
+## 🎵 Audio and Asset Fallbacks
+
+The game will still run if optional sound files are missing or fail to load. You may lose specific effects, but gameplay remains intact.
+
+## 💎 Why This Version Feels Good
+
+The piece movement uses visual interpolation so drops look smooth without sacrificing tight logic timing. Combined with ghost projection and particle feedback, the game keeps the clarity of classic Tetris while feeling more alive frame-to-frame.
+
+## 🛠️ Future Ideas
+
+- 🧤 Hold piece mechanic
+- 📈 Level progression tied to lines cleared
+- 🥇 High score persistence
+- 🔄 Wall-kick rotation system
 
